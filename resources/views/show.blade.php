@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,14 +8,19 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <title>Document</title>
 </head>
+
 <body>
-    <div class="card mb-3">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    <div class="container">
+        <h1 class="text-center mt-5">{{ $comic->title }}</h1>
+        <div class="card col-3 mb-3 mt-5 mx-auto">
+            <img src="{{ $comic->thumb }}" class="card-img-top" alt="{{ $comic->title }}">
+            <div class="card-body">
+                <h5 class="card-title">{{ $comic->series }}</h5>
+                <p class="card-text">{{ $comic->description }}</p>
+                <p class="card-text"><small class="text-muted">{{ $comic->type }}</small></p>
+            </div>
         </div>
-      </div>
+    </div>
 </body>
+
 </html>
