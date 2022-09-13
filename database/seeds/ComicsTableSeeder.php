@@ -19,6 +19,7 @@ class ComicsTableSeeder extends Seeder
             $newComic->author = $faker->userName;
             $newComic->pageNumber = $faker->numberBetween(100, 200);
             $newComic->editor = $faker->randomElement(['DC', 'Marvel']);
+            $newComic->save();
         }
     }
 }
