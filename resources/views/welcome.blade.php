@@ -36,6 +36,7 @@
                 @endforelse
             </tbody>
         </table>
+        <a href="{{ route('comics.create') }}" class="btn btn-primary" role="button">Aggiungi nuovo record</a>
     </div>
 </body>
 

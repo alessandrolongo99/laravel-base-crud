@@ -12,6 +12,7 @@
 <body>
     <div class="container">
         <h1 class="text-center mt-5">{{ $comic->title }}</h1>
+        <a href="{{ route('comics.index') }}" class="btn btn-primary" role="button">Torna alla home</a>
         <div class="card col-3 mb-3 mt-5 mx-auto">
             <img src="{{ $comic->thumb }}" class="card-img-top" alt="{{ $comic->title }}">
             <div class="card-body">
