@@ -20,6 +20,7 @@
                     <th scope="col">Serie</th>
                     <th scope="col">Tipo</th>
                     <th scope="col">Prezzo</th>
+                    <th scope="col">Edit</th>
                 </tr>
             </thead>
             <tbody>
@@ -30,6 +31,9 @@
                         <td>{{ $comic->series }}</td>
                         <td>{{ $comic->type }}</td>
                         <td>{{ $comic->price }}</td>
+                        <td>
+                            <a href="{{ route('comics.edit', $comic) }}" class="btn btn-primary" role="button">Edit</a>
+                        </td>
                     </tr>
                 @empty
                     <h3>Data not found.</h3>
