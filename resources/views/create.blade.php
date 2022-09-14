@@ -28,15 +28,19 @@
             </div>
             <div class="mb-3">
                 <label for="price" class="form-label">Prezzo</label>
-                <input type="number" class="form-control" name="price" id="price">
+                <input type="number" step="0.01" class="form-control" name="price" id="price">
             </div>
             <div class="mb-3">
                 <label for="series" class="form-label">Serie</label>
                 <input type="text" class="form-control" name="series" id="series">
             </div>
             <div class="mb-3">
-                <label for="thumb" class="form-label">Copertina</label>
-                <input type="url" class="form-control" name="thumb" id="thumb">
+                <label for="sale_date" class="form-label">Data di uscita</label>
+                <input type="text" class="form-control" name="sale_date" id="sale_date">
+            </div>
+            <div class="mb-3">
+                <label for="type" class="form-label">Tipo</label>
+                <input type="text" class="form-control" name="type" id="type">
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
