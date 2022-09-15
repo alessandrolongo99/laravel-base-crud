@@ -32,7 +32,7 @@
                         <td>{{ $comic->type }}</td>
                         <td>{{ $comic->price }}</td>
                         <td>
-                            <a href="{{ route('comics.edit', $comic) }}" class="btn btn-primary" role="button">Edit</a>
+                            <a href="{{ route('comics.edit', $comic->id) }}" class="btn btn-primary" role="button">Edit</a>
                         </td>
                     </tr>
                 @empty

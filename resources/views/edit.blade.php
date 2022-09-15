@@ -13,8 +13,9 @@
     <div class="container">
         <h1 class="text-center mt-5">CREATE NEW ELEMENT</h1>
         <a href="{{ route('comics.index') }}" class="btn btn-primary mb-5" role="button">Torna alla home</a>
-        <form action="{{ route('comics.store') }}" method="POST">
+        <form action="{{ route('comics.update', $comic->id) }}" method="POST">
             @csrf
+            @method('PUT')
             <div class="mb-3">
                 <label for="title" class="form-label">Titolo</label>
                 <input type="text" class="form-control" name="title" id="title" value="{{ $comic->title }}">
