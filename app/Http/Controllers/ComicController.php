@@ -92,8 +92,9 @@ class ComicController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Comic $comic)
+    public function destroy($id)
     {
+        $comic = Comic::findOrFail($id);
         $comic->delete();
         return back();
     }
