@@ -13,6 +13,15 @@
     <div class="container">
         <h1 class="text-center mt-5">CREATE NEW ELEMENT</h1>
         <a href="{{ route('comics.index') }}" class="btn btn-primary mb-5" role="button">Torna alla home</a>
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
         <form action="{{ route('comics.store') }}" method="POST">
             @csrf
             <div class="mb-3">
