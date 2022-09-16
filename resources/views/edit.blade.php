@@ -27,31 +27,31 @@
             @method('PUT')
             <div class="mb-3">
                 <label for="title" class="form-label">Titolo</label>
-                <input type="text" class="form-control" name="title" id="title" value="{{ $comic->title }}">
+                <input type="text" class="form-control" name="title" id="title" value="{{ old('title', $comic->title) }}">
             </div>
             <div class="mb-3">
                 <label for="description" class="form-label">Descrizione</label>
-                <input type="text" class="form-control" name="description" id="description" value="{{ $comic->description }}">
+                <input type="text" class="form-control" name="description" id="description" value="{{ old('description', $comic->description) }}">
             </div>
             <div class="mb-3">
                 <label for="thumb" class="form-label">Copertina</label>
-                <input type="url" class="form-control" name="thumb" id="thumb" value="{{ $comic->thumb }}">
+                <input type="url" class="form-control" name="thumb" id="thumb" value="{{ old('thumb', $comic->thumb) }}">
             </div>
             <div class="mb-3">
                 <label for="price" class="form-label">Prezzo</label>
-                <input type="number" step="0.01" class="form-control" name="price" id="price" value="{{ $comic->price }}">
+                <input type="number" step="0.01" class="form-control" name="price" id="price" value="{{ old('price', $comic->price) }}">
             </div>
             <div class="mb-3">
                 <label for="series" class="form-label">Serie</label>
-                <input type="text" class="form-control" name="series" id="series" value="{{ $comic->series }}">
+                <input type="text" class="form-control" name="series" id="series" value="{{ series('series', $comic->series) }}">
             </div>
             <div class="mb-3">
                 <label for="sale_date" class="form-label">Data di uscita</label>
-                <input type="text" class="form-control" name="sale_date" id="sale_date" value="{{ $comic->sale_date }}">
+                <input type="text" class="form-control" name="sale_date" id="sale_date" value="{{ old('sale_date', $comic->sale_date) }}">
             </div>
             <div class="mb-3">
                 <label for="type" class="form-label">Tipo</label>
-                <input type="text" class="form-control" name="type" id="type" value="{{ $comic->type }}">
+                <input type="text" class="form-control" name="type" id="type" value="{{ old('type', $comic->type) }}">
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
